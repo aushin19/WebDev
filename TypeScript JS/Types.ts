@@ -10,7 +10,7 @@ function sum (x: number, y:number){ //Regular Function Parameter Annotation
     return x+y
 }
 
-const mul = (x: number, y: number) => { //Arrow Function Parameter Annotation
+const mul = (x: number, y: number = 0) => { //Arrow Function Parameter Annotation
     return x*y
 }
 
@@ -20,6 +20,36 @@ function print (x: number, y:number): string{ //Regular Function Return Annotati
 
 const doNothing = (x: number, y: number): void => { //Arrow Function Return Annotation
     
+}
+
+const fruits: string[] = ["Apple", "Banana", "Coconut"] // Array Notations
+const animals: Array<string> = ["Dog", "Cat", "Tiger"] // Array Notations
+const numers: number[][] = [ // Multidimensional Array Notations
+    [1,2],[3,4]
+]
+
+const multi_numers: number[][][] = [[[1,2,3,4]]] // Multidimensional Array Notations (Nested)
+
+const car: {name: string, id: number, isActive: boolean} = { //if type not defined it will take "any" type by default
+    name: "shivam",
+    id: 0,
+    isActive: true
+}
+
+function test (): {name: string, id: number, isActive}{ //isActive is "any"
+    return {
+        name: "shivam",
+        id: 0,
+        isActive: true
+    }
+}
+
+const testAgain = (): {name: string, id, isActive}  => {
+    return {
+        name: "shivam",
+        id: 0,
+        isActive: true
+    }
 }
 
 // 1. Primitive Types
